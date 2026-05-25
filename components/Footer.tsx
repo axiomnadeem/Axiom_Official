@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Zap, Github, Twitter, Linkedin, Mail, Send } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Send } from 'lucide-react';
 
 export default function Footer() {
   const ref = useRef(null);
@@ -127,13 +127,29 @@ export default function Footer() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8 border-t border-white/[0.06]"
         >
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gradient-to-br from-[#00d4ff] to-[#0099ff] flex items-center justify-center shadow-[0_0_15px_rgba(0,212,255,0.3)]">
-              <Zap size={11} className="text-[#080b11] sm:hidden" />
-              <Zap size={13} className="text-[#080b11] hidden sm:block" />
-            </div>
+          <div className="flex items-center gap-1.5 sm:gap-2 group cursor-pointer">
+            {/* Custom SVG Logo matching Navbar */}
+            <svg 
+              viewBox="0 0 100 53" 
+              className="w-6 h-auto sm:w-7 fill-none drop-shadow-[0_0_10px_rgba(0,212,255,0.4)] group-hover:drop-shadow-[0_0_15px_rgba(0,212,255,0.6)] transition-all duration-300" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="#00d4ff">
+                <rect x="0" y="0" width="6" height="53" />
+                <rect x="94" y="0" width="6" height="53" />
+                <rect x="0" y="23.5" width="100" height="6" />
+              </g>
+              <circle 
+                cx="50" 
+                cy="26.5" 
+                r="13" 
+                stroke="#00d4ff" 
+                strokeWidth="6" 
+                fill="none"
+              /> 
+            </svg>
             <span
-              className="text-sm sm:text-base font-bold text-white"
+              className="text-sm sm:text-base font-bold text-white group-hover:opacity-90 transition-opacity"
               style={{ fontFamily: 'var(--font-space)' }}
             >
               Axiom <span className="text-[#00d4ff]">Dynamics</span>

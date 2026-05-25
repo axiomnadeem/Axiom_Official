@@ -101,24 +101,41 @@ export default function Navbar() {
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.2 }}
             >
-              {/* Logo mark */}
-              <div className="relative">
-                <div
-                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center"
-                  style={{
-                    background: 'linear-gradient(135deg, #00d4ff 0%, #0070f3 100%)',
-                    boxShadow: '0 0 0 1px rgba(0,212,255,0.3), 0 4px 16px rgba(0,212,255,0.25)',
-                  }}
-                >
-                  <Zap size={15} className="text-[#080b11]" strokeWidth={2.5} />
-                </div>
-                {/* Subtle pulse ring */}
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    boxShadow: '0 0 0 4px rgba(0,212,255,0.12)',
-                  }}
+         {/* Premium Logo Container */}
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 group z-10 flex-shrink-0 cursor-pointer">
+                
+                {/* Ambient Background Glow - Subtle monochromatic cyan */}
+                <div 
+                  className="absolute inset-0 bg-[#00d4ff] opacity-10 blur-[10px] rounded-xl group-hover:opacity-30 group-hover:blur-[14px] transition-all duration-500" 
                 />
+                
+                {/* Glassmorphic Box */}
+                <div className="relative w-full h-full flex items-center justify-center bg-[#080b11]/90 backdrop-blur-md border border-white/10 rounded-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] group-hover:border-white/30 transition-all duration-300 group-hover:scale-[1.02]">
+                  
+                  {/* Solid/Clean SVG Logo */}
+                  <svg 
+                    viewBox="0 0 100 53" 
+                    className="w-8 h-8 sm:w-9 sm:h-9 fill-none drop-shadow-[0_2px_8px_rgba(0,212,255,0.3)]" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Solid crisp cyan color matching the navbar theme */}
+                    <g fill="#00d4ff">
+                      <rect x="0" y="0" width="6" height="53" />
+                      <rect x="94" y="0" width="6" height="53" />
+                      <rect x="0" y="23.5" width="100" height="6" />
+                    </g>
+                    
+                    <circle 
+                      cx="50" 
+                      cy="26.5" 
+                      r="13" 
+                      stroke="#00d4ff" 
+                      strokeWidth="6" 
+                      fill="none"
+                    /> 
+                  </svg>
+                  
+                </div>
               </div>
 
               <div className="flex items-baseline gap-0.5">
