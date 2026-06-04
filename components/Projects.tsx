@@ -86,7 +86,7 @@ const projects = [
     accentSecondary: '#00d4ff',
     borderGlow: 'rgba(255,0,128,0.25)',
     icons: [Scissors, Palette, Layers],
-    demoBtn: { label: 'Open Studio', href: '#' },
+    demoBtn: { label: 'Open Studio', href: 'https://fabrixa-studio.netlify.app/' },
     codeBtn: { label: 'Learn More', href: '#' },
     mockupContent: (
       <div className="w-full h-full flex flex-col gap-2 p-3 sm:p-4">
